@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace TodoIst_App
 {
@@ -43,6 +45,11 @@ namespace TodoIst_App
         public void EnterText(By element, string text)
         {
             driver.FindElement(element).SendKeys(text);
+        }
+
+        public void WaitTime()
+        {
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
     }

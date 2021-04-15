@@ -21,6 +21,7 @@ namespace TodoIst_App.PageObjects
         public LoginPage OpenBrowser()
         {
             driver.Url = url;
+            WaitTime();
 
             return this;
         }
